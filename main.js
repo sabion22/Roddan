@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
         card.className = 'category-card';
         card.innerHTML = `
             <img src="${item.image}" alt="${item.name}">
+            <div class="category-vertical-title">${item.name}</div>
             <div class="category-info">
-                <h3>${item.name}</h3>
                 <p>Curadoria técnica para máxima tração.</p>
                 <span class="btn btn-primary">
                     ${waIcon}
@@ -99,15 +99,76 @@ document.addEventListener('DOMContentLoaded', () => {
         return card;
     };
 
-    // Inject initial cards
-    content.categories.items.forEach(item => {
-        categoryTrack.appendChild(createCard(item));
+    // Inject cards (we'll inject them twice for a smoother loop)
+    const injectCards = () => {
+        categoryTrack.innerHTML = '';
+        [...content.categories.items, ...content.categories.items].forEach(item => {
+            categoryTrack.appendChild(createCard(item));
+        });
+    }
+    injectCards();
+
+    // 5.1 Auto-scroll Logic (Interactive)
+    const galleryContainer = document.querySelector('.gallery-container');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let autoScrollInterval;
+    const scrollSpeed = 1; // pixels per frame
+
+    const startAutoScroll = () => {
+        if (autoScrollInterval) return;
+        autoScrollInterval = setInterval(() => {
+            if (!isDown) {
+                galleryContainer.scrollLeft += scrollSpeed;
+                // Infinite loop check
+                if (galleryContainer.scrollLeft >= categoryTrack.scrollWidth / 2) {
+                    galleryContainer.scrollLeft = 0;
+                }
+            }
+        }, 30);
+    };
+
+    const stopAutoScroll = () => {
+        clearInterval(autoScrollInterval);
+        autoScrollInterval = null;
+    };
+
+    galleryContainer.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - galleryContainer.offsetLeft;
+        scrollLeft = galleryContainer.scrollLeft;
+        stopAutoScroll();
     });
 
-    // Clone for infinite effect
-    content.categories.items.forEach(item => {
-        categoryTrack.appendChild(createCard(item));
+    galleryContainer.addEventListener('mouseleave', () => {
+        isDown = false;
+        startAutoScroll();
     });
+
+    galleryContainer.addEventListener('mouseup', () => {
+        isDown = false;
+        startAutoScroll();
+    });
+
+    galleryContainer.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - galleryContainer.offsetLeft;
+        const walk = (x - startX) * 2;
+        galleryContainer.scrollLeft = scrollLeft - walk;
+    });
+
+    // Touch events for mobile
+    galleryContainer.addEventListener('touchstart', () => {
+        stopAutoScroll();
+    }, { passive: true });
+
+    galleryContainer.addEventListener('touchend', () => {
+        setTimeout(startAutoScroll, 1000);
+    }, { passive: true });
+
+    startAutoScroll();
 
     // 6. Differentials
     document.getElementById('differentials-title').textContent = content.differentials.title;
@@ -133,12 +194,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // 7. How it Works
     document.getElementById('how-title').textContent = content.howItWorks.title;
     const stepsGrid = document.getElementById('how-steps');
+    stepsGrid.innerHTML = '';
     content.howItWorks.steps.forEach(step => {
         const stepEl = document.createElement('div');
         stepEl.className = 'step reveal';
         stepEl.innerHTML = `
-            <span class="step-number">${step.number}</span>
-            <p style="font-weight: 700;">${step.text}</p>
+            <div class="step-icon-wrapper">
+                <span class="step-number">${step.number}</span>
+            </div>
+            <p>${step.text}</p>
         `;
         stepsGrid.appendChild(stepEl);
     });

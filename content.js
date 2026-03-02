@@ -51,8 +51,8 @@ export const content = {
             {
                 title: "Estoque Real",
                 description: "Aqui não tem espera. Temos o maior estoque físico do Brasil com envio imediato.",
-                icon: "warehouse",
-                color: "#1A1A1A"
+                icon: "inventory_2",
+                color: "#CC0000"
             },
             {
                 title: "Logística Inteligente",
@@ -73,25 +73,25 @@ export const content = {
             {
                 id: "moto-trail",
                 name: "Moto Trail / Off",
-                image: "https://images.unsplash.com/photo-1471466054146-e71bcc0d2bb2?q=80&w=1200&auto=format&fit=crop",
+                image: "https://i.postimg.cc/sgBKKBBG/freepik-br-5fb9b598-60c8-477b-8417-77fbd4b86474-2c85e39f858472b28f17697971317471-1024-1024.webp",
                 cta: "Ver Catálogo"
             },
             {
                 id: "quad-atv",
                 name: "Quadriciclos ATV",
-                image: "https://images.unsplash.com/photo-1502675135487-e971002a6adb?q=80&w=1200&auto=format&fit=crop",
+                image: "https://i.postimg.cc/D0jdPFnp/spray-b13b0702e8c1f5898117685042939412-1024-1024.webp",
                 cta: "Ver Catálogo"
             },
             {
                 id: "moto-street",
                 name: "Street / Speed",
-                image: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop",
+                image: "https://i.postimg.cc/m2kS2cSs/lubrificante-ipiranga-d3306db0964013deab17685035512353-1024-1024.webp",
                 cta: "Ver Catálogo"
             },
             {
                 id: "utv-racing",
                 name: "UTV Racing",
-                image: "https://images.unsplash.com/photo-1542127393-84734891b920?q=80&w=1200&auto=format&fit=crop",
+                image: "https://i.postimg.cc/g0FyDgbb/23.jpg",
                 cta: "Ver Catálogo"
             },
             {
@@ -126,9 +126,9 @@ export const content = {
     howItWorks: {
         title: "Experiência de Compra Simples",
         steps: [
-            { number: "01", text: "Escolha seu pneu ideal em nossas categorias." },
-            { number: "02", text: "Chame um especialista agora no WhatsApp." },
-            { number: "03", text: "Receba com rapidez e segurança na sua porta." }
+            { number: "01", icon: "motorcycle", text: "Escolha seu pneu ideal em nossas categorias." },
+            { number: "02", icon: "chat", text: "Chame um especialista agora no WhatsApp." },
+            { number: "03", icon: "local_shipping", text: "Receba com rapidez e segurança na sua porta." }
         ]
     },
     finalCta: {
