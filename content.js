@@ -73,7 +73,7 @@ export const content = {
     },
     storytelling: {
         title: "Sua referência em desempenho e confiança.",
-        text: "A RODDAN vai muito além de ser uma simples distribuidora. Somos uma equipe de especialistas em Piracicaba que vive o universo dos motores todos os dias. Conhecemos de perto o que cada máquina precisa para entregar alta performance, seja um Honda Fortrax enfrentando terrenos difíceis ou motos encarando trilhas pesadas. Aqui você faz bons negócios com quem realmente entende do assunto.Trabalhamos com respeito, conhecimento técnico de verdade e produtos de alta qualidade para garantir que sua máquina esteja sempre pronta para o próximo desafio.",
+        text: "A RODDAN vai muito além de ser uma simples distribuidora. Somos uma equipe de especialistas em Piracicaba que vive o universo dos motores todos os dias. Conhecemos de perto o que cada máquina precisa para entregar alta performance, seja um Honda Fortrax enfrentando terrenos difíceis ou motos encarando trilhas pesadas. Aqui você faz bons negócios com quem realmente entende do assunto. Trabalhamos com respeito, conhecimento técnico de verdade e produtos de alta qualidade para garantir que sua máquina esteja sempre pronta para o próximo desafio.",
         image: "https://i.postimg.cc/wM7Xdf83/ICONE-SUPORTE-(2).png"
     },
     categories: {
