@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${item.image}" alt="${item.name}">
             <div class="category-vertical-title">${item.name}</div>
             <div class="category-info">
-                <p>Curadoria técnica para máxima tração.</p>
+                <p>${item.description}</p>
                 <span class="btn btn-primary">
                     ${waIcon}
                     ${item.cta}
@@ -208,6 +208,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 8. Final CTA
+    const finalCtaSection = document.getElementById('final-cta-section');
+    if (finalCtaSection && content.finalCta.backgroundImage) {
+        finalCtaSection.style.backgroundImage = `linear-gradient(rgba(204, 0, 0, 0.4), rgba(10, 10, 10, 0.9)), url('${content.finalCta.backgroundImage}')`;
+    }
+
     document.getElementById('final-cta-title').textContent = content.finalCta.title;
     document.getElementById('final-cta-subtitle').textContent = content.finalCta.subtitle;
     const finalCtaBtn = document.getElementById('final-cta-btn');
@@ -219,9 +224,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // 9. Footer
     document.getElementById('footer-logo').innerHTML = `${content.brand.name}<span>.</span>`;
     document.getElementById('footer-tagline').textContent = content.brand.tagline;
-    document.getElementById('footer-address').textContent = content.brand.contact.address;
-    document.getElementById('footer-cnpj').textContent = `CNPJ: ${content.brand.contact.cnpj}`;
     document.getElementById('copyright-brand').textContent = content.brand.name;
+
+    const contactInfo = document.getElementById('footer-contact-info');
+    let contactHtml = '';
+    if (content.brand.contact.email) contactHtml += `<p>Email: ${content.brand.contact.email}</p>`;
+    if (content.brand.contact.phone) contactHtml += `<p>WhatsApp: ${content.brand.contact.phone}</p>`;
+    if (content.brand.contact.hours) contactHtml += `<p>Horário: ${content.brand.contact.hours}</p>`;
+    if (content.brand.contact.address) contactHtml += `<p>${content.brand.contact.address}</p>`;
+    if (content.brand.contact.cnpj) contactHtml += `<p>CNPJ: ${content.brand.contact.cnpj}</p>`;
+    contactInfo.innerHTML = contactHtml;
+
+    const socialLinks = document.getElementById('footer-social-links');
+    let socialHtml = '';
+    if (content.brand.social.instagram) socialHtml += `<a href="${content.brand.social.instagram}" target="_blank">Instagram</a>`;
+    if (content.brand.social.facebook) socialHtml += `<a href="${content.brand.social.facebook}" target="_blank">Facebook</a>`;
+    if (content.brand.social.linkedin) socialHtml += `<a href="${content.brand.social.linkedin}" target="_blank">LinkedIn</a>`;
+    socialLinks.innerHTML = socialHtml || `<a href="#" class="whatsapp-link">Contato</a>`;
 
     // 10. WhatsApp Links Setup & Tracking
     const whatsappUrl = `https://wa.me/${content.brand.contact.whatsapp}?text=${encodeURIComponent(content.brand.contact.whatsappMessage)}`;

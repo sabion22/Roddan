@@ -2,16 +2,24 @@ export const content = {
     brand: {
         name: "RODDAN",
         suffix: "Distribuidora",
-        tagline: "Performance que leva você além.",
+        tagline: "Performance técnica e durabilidade onde você precisa.",
         logoHeight: {
             web: "100px",
             mobile: "80px"
         },
         contact: {
-            whatsapp: "5511999999999",
-            whatsappMessage: "Olá, gostaria de saber mais sobre os pneus da RODDAN.",
-            address: "São Paulo, Brasil",
-            cnpj: "00.000.000/0000-00"
+            phone: "19 99101-9684",
+            whatsapp: "5519991019684",
+            whatsappMessage: "Olá, encontrei a RODDAN na internet e gostaria de ajuda para escolher pneus para alta performance e segurança.",
+            email: "roddandistribuidora@gmail.com",
+            address: "", // Removido por enquanto
+            cnpj: "", // Removido por enquanto
+            hours: "Segunda a Sexta, das 8:30 às 17:00"
+        },
+        social: {
+            instagram: "https://instagram.com/roddandistribuidora",
+            facebook: "",
+            linkedin: ""
         }
     },
     styleConfig: {
@@ -34,107 +42,114 @@ export const content = {
         }
     },
     hero: {
-        title: "PNEUS PARA QUEM NÃO ACEITA LIMITES.",
-        subtitle: "A principal distribuidora especializada em pneus de moto e quadriciclo do Brasil. Estoque real, pronta entrega e logística rápida.",
+        title: "PNEUS DE ALTA PERFORMANCE EM PIRACICABA E REGIÃO.",
+        subtitle: "A principal distribuidora e referência em pneus de moto off-road e quadriciclos Honda Fortrax do Brasil. Alta qualidade, consultoria especialista e segurança.",
         videoUrl: "/assets/videos/hero-background.mp4",
-        ctaPrimary: "Falar no WhatsApp",
-        ctaSecondary: "Ver Produtos"
+        ctaPrimary: "Falar com Consultor",
+        ctaSecondary: "Ver Pneus"
     },
     valueProp: {
         items: [
             {
-                title: "Expertise de Pista",
-                description: "Nascemos no off-road. Nossos especialistas indicam o pneu certo para o seu solo e modalidade.",
-                icon: "sports_motorsports",
+                title: "Alta Qualidade",
+                description: "Representamos as melhores marcas, garantindo tração máxima, confiabilidade e estabilidade, seja na trilha, no campo ou em rodovias.",
+                icon: "verified_user",
                 color: "#CC0000"
             },
             {
-                title: "Estoque Real",
-                description: "Aqui não tem espera. Temos o maior estoque físico do Brasil com envio imediato.",
-                icon: "inventory_2",
+                title: "Curadoria Especializada",
+                description: "Atendimento premium com profundo entendimento das suas necessidades e da particularidade de cada veículo e terreno.",
+                icon: "support_agent",
                 color: "#CC0000"
             },
             {
-                title: "Logística Inteligente",
-                description: "Parcerias com transportadoras de elite para garantir entrega ultra-rápida.",
-                icon: "speed",
+                title: "Experiência Comprovada",
+                description: "Nós transpiramos performance e off-road. Trazemos nossa experiência prática em trilhas para indicar precisamente as melhores opções.",
+                icon: "psychology",
                 color: "#CC0000"
             }
         ]
     },
     storytelling: {
-        title: "Performance que leva você além do óbvio.",
-        text: "A RODDAN não é apenas uma distribuidora. Somos o parceiro estratégico de quem vive a adrenalina. Substituímos a RTS Pneus com uma missão clara: profissionalizar o acesso a pneus de alta performance no Brasil. Nossa curadoria técnica garante que você tenha o máximo de tração, durabilidade e segurança em qualquer terreno.",
+        title: "Sua referência em desempenho e confiança.",
+        text: "A RODDAN vai muito além de ser uma simples distribuidora. Somos uma equipe de especialistas em Piracicaba que vive o universo dos motores todos os dias. Conhecemos de perto o que cada máquina precisa para entregar alta performance, seja um Honda Fortrax enfrentando terrenos difíceis ou motos encarando trilhas pesadas. Aqui você faz bons negócios com quem realmente entende do assunto.Trabalhamos com respeito, conhecimento técnico de verdade e produtos de alta qualidade para garantir que sua máquina esteja sempre pronta para o próximo desafio.",
         image: "https://i.postimg.cc/wM7Xdf83/ICONE-SUPORTE-(2).png"
     },
     categories: {
-        title: "Nossa Linha de Alta Performance",
+        title: "Nossa Linha Premium e Especializada",
+        subtitle: "Deslize para ver nossas indicações técnicas, aprovadas por quem vive na terra.",
         items: [
             {
                 id: "moto-trail",
-                name: "Moto Trail / Off",
-                image: "https://i.postimg.cc/sgBKKBBG/freepik-br-5fb9b598-60c8-477b-8417-77fbd4b86474-2c85e39f858472b28f17697971317471-1024-1024.webp",
-                cta: "Ver Catálogo"
+                name: "Motos Trail",
+                description: "Máxima aderência e firmeza em qualquer terreno. Ex: Pneu de Trilha Vipal 300x21 Dianteiro e 400x18 Traseiro.",
+                image: "https://i.postimg.cc/T3Th9RCj/Design-sem-nome-2026-03-05T112954-902.png",
+                cta: "Consultar Produtos"
             },
             {
                 id: "quad-atv",
-                name: "Quadriciclos ATV",
-                image: "https://i.postimg.cc/D0jdPFnp/spray-b13b0702e8c1f5898117685042939412-1024-1024.webp",
-                cta: "Ver Catálogo"
+                name: "Quads Fortrax",
+                description: "A linha completa e dedicada de pneus Dianteiros e Traseiros para o seu Quadriciclo Honda Fortrax. Tração sem concessões.",
+                image: "https://i.postimg.cc/xdRvRxvP/Design-sem-nome-2026-03-05T113712-401.png",
+                cta: "Consultar Produtos"
             },
             {
-                id: "moto-street",
-                name: "Street / Speed",
-                image: "https://i.postimg.cc/m2kS2cSs/lubrificante-ipiranga-d3306db0964013deab17685035512353-1024-1024.webp",
-                cta: "Ver Catálogo"
+                id: "performance",
+                name: "Performance",
+                description: "Desempenho duradouro e melhor refrigeração e vida útil com os nossos Lubrificantes Ipiranga Moto Performance.",
+                image: "https://i.postimg.cc/FzB5JVCd/Design-sem-nome-2026-03-05T114506-335.png",
+                cta: "Ver Detalhes"
             },
             {
-                id: "utv-racing",
-                name: "UTV Racing",
-                image: "https://i.postimg.cc/g0FyDgbb/23.jpg",
-                cta: "Ver Catálogo"
+                id: "manutencao",
+                name: "Manutenção",
+                description: "Proteção contra desgastes intensos do uso off-road usando as melhores opções do mercado, como o Desengripante Starke.",
+                image: "https://i.postimg.cc/y80tVKKB/Design-sem-nome-2026-03-05T114652-611.png",
+                cta: "Ver Detalhes"
             },
             {
-                id: "moto-cross",
-                name: "Motocross / Enduro",
-                image: "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?q=80&w=1200&auto=format&fit=crop",
-                cta: "Ver Catálogo"
+                id: "xbri",
+                name: "Linha XBRI",
+                description: "Confiança, durabilidade e controle extremo em asfaltos ou ruas de terra. Destacando a eficiência comprovada do Ecoplus P1 XBRI.",
+                image: "https://i.postimg.cc/L5YYPN4z/Design-sem-nome-2026-03-05T120541-372.png",
+                cta: "Consultar Valor"
             }
         ]
     },
     differentials: {
-        title: "Por que a RODDAN é a escolha dos campeões?",
-        subtitle: "Unimos tecnologia, pronta entrega e o conhecimento de quem realmente anda na terra.",
+        title: "A Diferença na Excelência",
+        subtitle: "A RODDAN eleva o padrão de distribuição aliando profundo conhecimento a pneus de primeira linha.",
         items: [
             {
-                title: "Pneus Exclusivos",
-                text: "Trabalhamos com marcas e compostos que você só encontra aqui.",
+                title: "Qualidade Impecável",
+                text: "Fornecemos apenas o que há de mais refinado em estabilidade e tração. Produtos exaustivamente testados e comprovados.",
                 icon: "military_tech"
             },
             {
-                title: "Consultoria Técnica",
-                text: "Não vendemos apenas borracha, vendemos a solução para sua próxima trilha.",
-                icon: "psychology"
+                title: "Assessoria Qualificada",
+                text: "Esqueça o tradicional 'fechar pedido'. Realizamos uma consultoria ativa, indicando exatamente o pneu ideal para sua atuação.",
+                icon: "query_stats"
             },
             {
-                title: "Aceleração logística",
-                text: "Processamento de pedidos em tempo recorde para todo o Brasil.",
-                icon: "bolt"
+                title: "Respeito e Transparência",
+                text: "Construímos relações de longo prazo focadas no seu sucesso nas pistas e na preservação impecável da sua máquina.",
+                icon: "real_estate_agent"
             }
         ]
     },
     howItWorks: {
-        title: "Experiência de Compra Simples",
+        title: "Atendimento Altamente Especializado",
         steps: [
-            { number: "01", icon: "motorcycle", text: "Escolha seu pneu ideal em nossas categorias." },
-            { number: "02", icon: "chat", text: "Chame um especialista agora no WhatsApp." },
-            { number: "03", icon: "local_shipping", text: "Receba com rapidez e segurança na sua porta." }
+            { number: "01", icon: "troubleshoot", text: "Compartilhe seu objetivo e cenário de uso com o nosso time técnico no WhatsApp." },
+            { number: "02", icon: "thumb_up", text: "Receba as indicações mais assertivas das linhas Honda Fortrax, Vipal, Xbri, Ipiranga e Starke." },
+            { number: "03", icon: "workspace_premium", text: "Tenha segurança na aquisição e extrema satisfação no asfalto e na terra." }
         ]
     },
     finalCta: {
-        title: "Pronto para sua próxima trilha?",
-        subtitle: "Fale agora com um especialista e encontre o pneu ideal para sua performance.",
-        buttonText: "Chamar no WhatsApp agora"
+        title: "A sua próxima conquista exige excelência.",
+        subtitle: "Solicite o atendimento de um consultor em Piracicaba (SP) ou agende o envio em qualquer lugar do Brasil.",
+        backgroundImage: "https://i.postimg.cc/zX6h5LS0/FOOTER.png",
+        buttonText: "Falar com Consultor RODDAN"
     },
     animations: {
         fadeUpDuration: 0.8,
