@@ -115,6 +115,13 @@ export const content = {
                 image: "https://i.postimg.cc/L5YYPN4z/Design-sem-nome-2026-03-05T120541-372.png",
                 cta: "Consultar Valor"
             }
+             {
+                id: "pecas",
+                name: "AUTOPEÇAS",
+                description: "Confiança, durabilidade e controle extremo em asfaltos ou ruas de terra. Destacando a eficiência comprovada do Ecoplus P1 XBRI.",
+                image: "https://i.postimg.cc/y8MP8pBg/PRODUTOS-SITE.png",
+                cta: "Consultar Valor"
+            }
         ]
     },
     differentials: {
