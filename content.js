@@ -3,6 +3,7 @@ export const content = {
         name: "RODDAN",
         suffix: "Distribuidora",
         tagline: "Performance técnica e durabilidade onde você precisa.",
+        favicon: "/assets/favicon.png", // Nome do arquivo de ícone na pasta assets
         logoHeight: {
             web: "100px",
             mobile: "80px"
