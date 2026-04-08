@@ -94,7 +94,13 @@ export const content = {
                 image: "https://i.postimg.cc/xdRvRxvP/Design-sem-nome-2026-03-05T113712-401.png",
                 cta: "Consultar Produtos"
             },
-    
+             {
+                id: "Vans",
+                name: "Vans",
+                description: "Sua Van merece mais. Pneus e peças com a durabilidade que a estrada exige.",
+                image: "https://i.postimg.cc/qq3KrWtn/Gemini-Generated-Image-ri7nnjri7nnjri7n.png",
+                cta: "Consultar Produtos"
+            },
             {
                 id: "performance",
                 name: "Performance",
@@ -117,18 +123,12 @@ export const content = {
                 cta: "Consultar Valor"
             },
             {
+
                 id: "pecas",
                 name: "AUTOPEÇAS",
                 description: "Confiança, durabilidade e controle extremo em asfaltos ou ruas de terra. Destacando a eficiência comprovada do Ecoplus P1 XBRI.",
                 image: "https://i.postimg.cc/y8MP8pBg/PRODUTOS-SITE.png",
                 cta: "Consultar Valor"
-            },
-            {
-                id: "Vans",
-                name: "Vans",
-                description: "Sua Van merece mais, pneus e peças com a durabilidade que a estrada exige e o desempenho que a carga demanda.",
-                image: "/assets/van.png",
-                cta: "Consultar Produtos"
             }
         ]
     },
